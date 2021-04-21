@@ -41,10 +41,13 @@ Option 2: MySQL dump files can be found here
 #### Additional Notes:
 
 InfluxDB (Docker)
-#### Summary: A highly-optimized time-series database directly handing queries from the Grafana. Since AWS does not provide InfluxDB directly, we are running an InfluxDB docker container on a EC2 instance
-#### Relationship With Other Services: It only serves the Grafana Dashboard
+#### Summary: 
+A highly-optimized time-series database directly handing queries from the Grafana. Since AWS does not provide InfluxDB directly, we are running an InfluxDB docker container on a EC2 instance
+#### Relationship With Other Services: 
+It only serves the Grafana Dashboard
 #### Directions:
-#### Additional Notes: There is a simple bash shell script that will import the data into influxDB. The data source is consistent with MySQL database.
+#### Additional Notes: 
+There is a simple bash shell script that will import the data into influxDB. The data source is consistent with MySQL database.
 
 ### Predictions API + Redis + cron (Docker)
 #### Summary: 
