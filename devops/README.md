@@ -1,15 +1,14 @@
 # Devops Documentation
 
-#### This documentation holds information about the following deployments:
+#### This documentation holds information about the following deployments and information:
 
-AWS RDS
-AWS EC2 Services + Health Checks
-Grafana on EC2
-Airflow in Docker on EC2
-Influx DB on EC2
-Predictions API + Redis on EC2
-AWS Amplify
-Deployment Costs
+* AWS RDS
+* Airflow in Docker on EC2
+* Predictions API + Redis on EC2
+* AWS Amplify
+* Grafana on EC2
+* Influx DB on EC2
+* AWS Deployment Costs
 
 ## AWS RDS
 ### Summary: 
@@ -24,14 +23,14 @@ stores the machine learning outcomes by the airflow-data-pipeline.
 
 ### Additional Notes: 
 Option 1: Directly import the .csv file into any MySQL server and name the database and table as indicated here. Use the default port 3306.  
-Option 2: MySQL dump files can be found here 
+Option 2: MySQL information and dump files can be found [here](https://github.com/PNNL-Project/mysql-files) 
 
 ## Services in Docker Containers
 
 ### Grafana on EC2
 #### Summary: 
+Grafana is used by the front end react app to show dashboards and visualizations. 
 
-Grafana is used by the front end react app to show dashboards and visualization.
 #### Relationship With Other Services:
 
 Grafana is used by the front end react app to show dashboards and capitalization
@@ -39,22 +38,17 @@ Grafana talks to influxdb to get the cost
 #### Directions:
 
 #### Additional Notes:
-
 If the mailing address of grafana has to changed please change the grafana.ini file in <grafana-docker-link>
 
 ### Airflow in Docker on EC2
 #### Summary:
-
 Airflow is an open-source work load management problem.
 
 #### Relationship With Other Services:
+Airflow queries the MySQL database to create prediction labels that are stored back into the MySQL database.
 
-Airflow talks with mySQL database to push new data into the system.
-#### Directions:
-
-Please refer to https://github.com/PNNL-Project/airflow-data-pipeline/blob/master/airflow/Readme.md
-
-#### Additional Notes:
+#### Deployment Directions:
+Please refer to the readme located in the  airflow-data-pipeline repo [here](https://github.com/PNNL-Project/airflow-data-pipeline/blob/master/airflow/Readme.md)
 
 InfluxDB (Docker)
 #### Summary: 
@@ -81,9 +75,11 @@ These three components are all containerized and are launched via docker compose
 #### Additional Notes:
 
 
-### Hunting Service (Docker)
-### Summary : Hunting service is used to create alerts by the front end
-### Realtionship : Hunting service is used by the front end to create alerts
+### Alert Service (Docker)
+### Summary: 
+Alert service is used to create alerts by the front end
+### Relationship With Other Services: 
+Alert service is used by the front end react app to create visualize hunting events found within the data.
 
 
 ### Deployment Costs
