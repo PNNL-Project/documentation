@@ -20,14 +20,23 @@ The components within PNNL Project include:
 #### What was the flow used to create the various piechart/heatmap/stacked bar visualizations?
 In order to create the visualizations, there were various steps involved:
 
-1. Process the SEB CSV data to import into CHISSL (data was aggregated into 1 hour windows for a particular metric for each device)
+1. Processed the SEB CSV data to import into CHISSL (data was aggregated into 1 hour windows for a particular metric for each device)
 2. Used CHISSL help create a trainset to create machine learning models
-3. Stored the SEB CSV data into the a denormalized table in MySQL
+3. Stored the SEB CSV data into the a denormalized table in MySQL using [TablePlus](https://docs.tableplus.com/)
 4. A daily job was developed using Airflow and Python Code to do the following:
      * Reprocess SEB data from MySQL in the exact same format at step 1
      * Run the data through the machine learning model to create predictions on the yesterday's data
      * Store the predictions back into MySQL
-5. A chron job querys MySQL (on an hourly basis) for the prediction labels and stores this into a redis cache
-6. Upon loading the frontend react app, it queries the predictions api to retrieve the data stored into the redis cache
-7. The frontend then displays the data provided from the predictions api 
+5. A chron job queried MySQL (on an hourly basis) for the prediction labels and stores this into a redis cache
+6. Upon loading the frontend react app, it queried the predictions api to retrieve the data stored into the redis cache
+7. The frontend then displayed the data provided from the predictions api 
+
+
+#### What was the flow used to create the alert service?
+In order to visualize the alerts, this also involved various steps:
+
+1. Data was imported into the MySQL database using the [DataProcessor](https://github.com/PNNL-Project/data-importers/tree/master/DataProcessor) into a normalized table
+2. The alert-service queries the data from MySQL every 15 mins to find hunting events
+3. Upon loading, the alerts component of the frontend-react application will visualize these alerts
+
 
