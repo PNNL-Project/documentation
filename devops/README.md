@@ -107,11 +107,7 @@ https://docs.google.com/presentation/d/1bXRQjJtvxacumiZao05njhjTySpyTQK3g5xDYKVk
 Cost for deploying Docker Images
 
 
-We plan to containerize all the services as docker images and deploy them in EC2. In this way all the services run on a single machine and the cost is reduced.
-
-We plan to use a EC2 instance with 16 GB RAM and 200 GB storage
-
-The cost of running this service would be 
+We have craeted Docker images for all the services. We have deployed them in EC2. We recommend to use a instance with 16GB RAM and 200 GB space. The cost of running the instance for a month is
 
 https://calculator.aws/#/estimate?id=12ff3ee39c622bcc1e0686151a43e3ccd39366e1
 
