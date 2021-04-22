@@ -30,14 +30,30 @@ Option 2: MySQL dump files can be found here
 
 ### Grafana on EC2
 #### Summary: 
+
+Grafana is used by the front end react app to show dashboards and visualization.
 #### Relationship With Other Services:
+
+Grafana is used by the front end react app to show dashboards and capitalization
+Grafana talks to influxdb to get the cost
 #### Directions:
+
 #### Additional Notes:
+
+If the mailing address of grafana has to changed please change the grafana.ini file in <grafana-docker-link>
 
 ### Airflow in Docker on EC2
 #### Summary:
+
+Airflow is an open-source work load management problem.
+
 #### Relationship With Other Services:
+
+Airflow talks with mySQL database to push new data into the system.
 #### Directions:
+
+Please refer to https://github.com/PNNL-Project/airflow-data-pipeline/blob/master/airflow/Readme.md
+
 #### Additional Notes:
 
 InfluxDB (Docker)
@@ -63,6 +79,12 @@ These three components are all containerized and are launched via docker compose
 #### Relationship With Other Services:
 #### Directions:
 #### Additional Notes:
+
+
+### Hunting Service (Docker)
+### Summary : Hunting service is used to create alerts by the front end
+### Realtionship : Hunting service is used by the front end to create alerts
+
 
 ### Deployment Costs
 #### Summary:
