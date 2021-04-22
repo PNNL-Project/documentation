@@ -35,8 +35,12 @@ In order to create the visualizations, there were various steps involved:
 #### What was the flow used to create the alert service?
 In order to visualize the alerts, this also involved various steps:
 
-1. Data was imported into the MySQL database using the [DataProcessor](https://github.com/PNNL-Project/data-importers/tree/master/DataProcessor) into a normalized table
+1. SEB Data was imported into the MySQL database using the [DataProcessor](https://github.com/PNNL-Project/data-importers/tree/master/DataProcessor) into a normalized table
 2. The alert-service queries the data from MySQL every 15 mins to find hunting events
 3. Upon loading, the alerts component of the frontend-react application will visualize these alerts
 
+#### What was the flow used to create the Grafana Dashboards?
 
+1. SEB given was historical, so the data set was transformed (shifting the timestamp to more recent dates so the simulated data appeared to be current)
+2. SEB CSV Data was parsed, processed, and imported into Influx DB
+3. Queries to InfluxDB were created to be displayed into the panels
