@@ -83,7 +83,37 @@ Alert service is used by the front end react app to create visualize hunting eve
 
 
 ### Deployment Costs
-#### Summary:
-#### Relationship With Other Services:
-#### Directions:
-#### Additional Notes:
+
+Summarized Devops Cost Report for all the AWS Services
+
+The estimates are provided for each month for services with recommended resources
+
+
+![image](https://user-images.githubusercontent.com/56701482/115756361-222b7180-a36c-11eb-8498-6cccbbfb0a23.png)
+
+
+
+
+More detailed Cost Report can be found at 
+
+https://docs.google.com/presentation/d/1bXRQjJtvxacumiZao05njhjTySpyTQK3g5xDYKVkU2w/edit#slide=id.gaf43eba715_0_0
+
+
+
+
+
+
+
+Cost for deploying Docker Images
+
+
+We plan to containerize all the services as docker images and deploy them in EC2. In this way all the services run on a single machine and the cost is reduced.
+
+We plan to use a EC2 instance with 16 GB RAM and 200 GB storage
+
+The cost of running this service would be 
+
+https://calculator.aws/#/estimate?id=12ff3ee39c622bcc1e0686151a43e3ccd39366e1
+
+
+ 
