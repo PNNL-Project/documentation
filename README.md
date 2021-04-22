@@ -8,7 +8,7 @@ The components within PNNL Project include:
 
 * **airflow-data-pipeline**: The ML data pipeline that queries MySQL daily to create predictions and store back in MySQL.
 * **data-importers**: Software programs utilized to import data into the MySQL and Influx Databases.
-* **documentation**: Overall documentation including instructions to setup the projects [(located in the devops folder)].(https://github.com/PNNL-Project/documentation/tree/main/devops)
+* **documentation**: Overall documentation including instructions to setup the projects [(located in the devops folder)](https://github.com/PNNL-Project/documentation/tree/main/devops)
 * **grafana-services**: The Grafana dashboard files and instructions along with the Influx DB files.
 * **ml-models**: ML models and the code used to develop them.
 * **mysql-files**: Documentation and links for the database structures and the content of the tables (using mysqldump).
