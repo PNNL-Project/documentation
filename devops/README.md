@@ -97,6 +97,39 @@ Alert service is used to create alerts by the front end
 
 Alert service is used by the front end react app to create visualize hunting events found within the data.
 
+
+### Deployment Costs
+
+Summarized Devops Cost Report for all the AWS Services
+
+The estimates are provided for each month for services with recommended resources
+
+
+![image](https://user-images.githubusercontent.com/56701482/115756361-222b7180-a36c-11eb-8498-6cccbbfb0a23.png)
+
+
+
+
+More detailed Cost Report can be found at 
+
+https://docs.google.com/presentation/d/1bXRQjJtvxacumiZao05njhjTySpyTQK3g5xDYKVkU2w/edit#slide=id.gaf43eba715_0_0
+
+
+
+
+
+
+
+Cost for deploying Docker Images
+
+
+We have created Docker images for all the services and have deployed them in EC2. We recommend to use a instance with 16GB RAM and 200 GB space. The cost of running the instance for a month is
+
+https://calculator.aws/#/estimate?id=12ff3ee39c622bcc1e0686151a43e3ccd39366e1
+
+
+ 
 ### AWS Deployment Costs
 
 Please see `DevOps Cost Report.pdf`
+
