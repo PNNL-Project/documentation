@@ -65,7 +65,7 @@ In order to visualize the alerts, this also involved various steps:
 1. Install MySQL
 2. Created a database
 3. Syntax for restoring a MySQL dump: \
-   \*\*<code>mysql &lt; database_name &lt; file.sql</code></strong>
+   <code>mysql &lt; database_name &lt; file.sql</code></strong>
 4. Restore the following files: \
    a) `dumpshunting_presentation-2021_04_15-dump.sql` \
    b) `Labelled_agg_tables-2021_04_21-dump.sql` \
